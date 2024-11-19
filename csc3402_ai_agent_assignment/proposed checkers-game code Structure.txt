@@ -1,0 +1,68 @@
+checkers-game/
+├── game-engine/
+│   ├── src/
+│   │   ├── controllers/
+│   │   │   ├── gameController.js           # Handles game-related logic
+│   │   │   └── moveController.js           # Validates and processes moves
+│   │   ├── models/
+|   |   |   |__ board.js (made of squares)  # Made of squares. Each square has unique id. Each square keeps occupations state. Each square keeps track of which piece occupies it.
+│   │   │   ├── game.js                     # Game state model
+│   │   │   ├── player.js                   # Player model
+│   │   │   └── piece.js                    # Piece model (including king logic)
+│   │   ├── services/
+│   │   │   ├── gameService.js              # Business logic for game operations
+│   │   │   └── stateService.js             # State management and database interactions
+│   │   ├── routes/
+│   │   │   └── gameRoutes.js               # API routes for game operations
+│   │   ├── database/
+│   │   │   └── db.js                       # Database connection setup
+│   │   ├── middleware/
+│   │   │   └── errorMiddleware.js          # Error handling middleware
+│   │   └── app.js                          # Express app setup
+│   ├── tests/
+│   │   ├── gameController.test.js          # Unit tests for controllers
+│   │   ├── gameService.test.js             # Unit tests for services
+│   │   └── integration.test.js              # Integration tests
+│   └── package.json                        # Dependencies and scripts
+│
+├── ai-agent/
+│   ├── src/
+│   │   ├── models/
+│   │   │   ├── state.js                    # Game state representation for the AI
+│   │   │   └── action.js                   # Action model for possible moves
+│   │   ├── agents/
+│   │   │   ├── aiAgent.js                  # Main AI agent logic
+│   │   │   └── neuralNetwork.js            # Neural network setup and training logic
+│   │   ├── services/
+│   │   │   └── trainingService.js          # Service for training the AI
+│   │   ├── api/
+│   │   │   └── aiApi.js                    # API interaction with the game engine
+│   │   └── app.py                          # Flask or FastAPI app setup
+│   ├── tests/
+│   │   ├── aiAgent.test.js                 # Unit tests for the AI agent
+│   │   ├── trainingService.test.js         # Unit tests for training logic
+│   │   └── integration.test.js              # Integration tests
+│   └── requirements.txt                    # Python dependencies
+│
+├── user-interface/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Board.js                    # Checkers board component
+│   │   │   ├── Piece.js                    # Piece component
+│   │   │   ├── GameStatus.js               # Game status display
+│   │   │   └── PlayerControls.js            # Player controls for making moves
+│   │   ├── pages/
+│   │   │   ├── index.js                     # Main game page
+│   │   │   └── results.js                   # Game results page
+│   │   ├── services/
+│   │   │   ├── apiService.js                # Service for API calls to the game engine
+│   │   │   └── gameService.js               # Business logic for UI interactions
+│   │   └── App.js                           # Main app setup
+│   ├── tests/
+│   │   ├── Board.test.js                    # Unit tests for the board component
+│   │   ├── PlayerControls.test.js           # Unit tests for player controls
+│   │   └── integration.test.js              # Integration tests
+│   └── package.json                         # Dependencies and scripts
+│
+├── README.md                                # Project documentation
+└── docker-compose.yml                       # Docker configuration for running services
